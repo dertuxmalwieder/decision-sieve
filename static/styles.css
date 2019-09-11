@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+/* http://www.0to255.com/d3f5d0 */
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    font: 14px/1 'Open Sans', sans-serif;
+    color: #edfbec;
+    background: #0e330b;
+}
+
+main {
+    color: #0e330b;
+}
+
+h1, h2, h3 {
+    padding: 10px 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+h1 a {
+    color: #edfbec;
+    text-decoration: none;
+}
+
+p {
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+main {
+    min-width: 320px;
+    max-width: 800px;
+    padding: 50px;
+    margin: 15px auto 0;
+    background: #fff;
+}
+
+section {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+
+ul li {
+    line-height:1.5em;
+    margin-left:1em;
+}
+
+ol li {
+    margin-left:1.8em;
+}
+
+input.tabbar {
+    display: none;
+}
+
+input.name {
+    float:left;
+}
+
+input.name,
+input.price {
+    border:1px solid gray;
+    padding:2px;
+    width:300px;
+    font-size:larger;
+}
+
+input.slider,
+input.price {
+    float:right;
+    width:100px;
+}
+
+input.number {
+    /* number field */
+    width:80px;
+    padding:2px;
+    font-size:larger;
+}
+
+.entry {
+    display:block;
+    clear:both;
+}
+
+.entry .counter {
+    float:left;
+    color: darkgray;
+    font-size:larger;
+    font-weight:bold;
+    width:3.1em;
+    text-align:right;
+    margin-right:0.5em;
+    padding-top:3px;
+}
+
+.button {
+    padding:4px;
+    text-transform:lowercase;
+    border:1px solid #91e68a;
+    background-color:#edfbec;
+    transition:all ease 0.8s;
+    color:#0e330b;
+}
+
+.button.main {
+    display:block;
+    font-size:2em;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1em;
+}
+
+.button:hover {
+    background-color:#fafefa;
+    border-color:#50d744;
+}
+
+#bitbucket {
+    position:fixed;
+    top:0px;
+    right:0px;
+}
+
+#bitbucket > img {
+    border:none;
+}
+
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+}
+
+label:before {
+    font-family: fontawesome;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+label[for*='1']:before { display: none; margin-right:5px; font-family: "Font Awesome 5 Solid"; content: '\f1de'; }
+label[for*='2']:before { display: none; font-family: "Font Awesome 5 Solid"; content: '\f155'; }
+label[for*='3']:before { display: none; font-family: "Font Awesome 5 Solid"; content: '\f129'; }
+
+label:hover {
+    color: #888;
+    cursor: pointer;
+}
+
+input:checked + label {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 2px solid #43d436;
+    border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+    display: block;
+}
+
+.sieved {
+	display: none;
+}
+
+@media screen and (max-width: 650px) {
+    label .tabtext {
+        font-size: 0;
+    }
+    label:before {
+        margin: 0;
+        font-size: 18px;
+        display:inline;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    label {
+        padding: 15px;
+    }
+}

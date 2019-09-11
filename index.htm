@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <title>The Decision Sieve</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="static/styles.css" />
+    <link rel="stylesheet" type="text/css" href="static/notie.min.css" />
+
+    <script>
+      FontAwesomeConfig = { searchPseudoElements: true };
+    </script>
+    <script src="static/umbrella.min.js"></script>
+    <script defer src="static/notie.min.js"></script>
+    <script defer src="static/sieve.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="bitbucket"><a href="https://bitbucket.org/tux_/decision-sieve" target="_blank"><img src="static/bitbucket.png" title="Fork me on Bitbucket" /></a></div>
+
+    <h1><a href="/">The Decision Sieve</a></h1>
+
+    <h2>Did you ever need to decide about things?</h2>
+
+    <main>
+      <input id="tab1" type="radio" name="tabs" class="tabbar" checked>
+      <label for="tab1"><span class="tabtext">&nbsp;Prio Sieve</span></label>
+
+      <input id="tab2" type="radio" name="tabs" class="tabbar">
+      <label for="tab2"><span class="tabtext">&nbsp;Price Sieve</span></label>
+
+      <input id="tab3" type="radio" name="tabs" class="tabbar">
+      <label for="tab3"><span class="tabtext">&nbsp;Tutorial & FAQ</span></label>
+
+      <section id="content1">
+        <input type="button" value="Add new item" class="button" id="prio-add-new" />
+        <br /><br />
+        <div id="priolist">
+          <div class="entry">
+            <span class="counter">1</span>
+            <input class="name prioname" title="Enter the name of the item" placeholder="Enter the name of the item" />
+            <input type="range" class="slider" title="Priority: low, normal, high" min="0.75" max="1.25" value="1" step="0.25" />
+          </div>
+        </div>
+        <br /><br />
+        <br /><br />
+        Max. items: <input type="number" placeholder="Limit" class="number" title="Define how many items you want to keep on your list." id="prio-max-items" />
+        <input type="button" value="Sieve!" class="button main" id="prio-sieve" />
+        <input type="button" value="(undo)" class="button main" style="display:none" id="undo-prio-sieve" />
+      </section>
+
+      <section id="content2">
+        <input type="button" value="Add new item" class="button" id="price-add-new" />
+        <br /><br />
+        <div id="pricelist">
+          <div class="entry">
+            <span class="counter">1</span>
+            <input class="name" title="Enter the name of the item" placeholder="Enter the name of the item" />
+            <input class="price" placeholder="Price" title="Price (only numbers please)" />
+          </div>
+        </div>
+        <br /><br />
+        <br /><br />
+        Max. budget: <input type="number" placeholder="Budget" class="number" title="Define how much your budget is." id="price-budget" /><span id="spent"></span>
+        <input type="button" value="Sieve!" class="button main" id="price-sieve" />
+        <input type="button" value="(undo)" class="button main" style="display:none" id="undo-price-sieve" />
+      </section>
+
+      <section id="content3">
+        <h3>What is this?</h3>
+
+        <p>Generally spoken, this is a web service that will help you filter your bucket list. If you have a limited budget or you need to limit your shopping to a certain number of things, the Decision Sieve can help you clean up your list to a reasonable amount. I actually wrote it to decide about which whisky to buy - and it helped me a lot.</p>
+
+        <h3>So why did you write this as a website instead of a real application?</h3>
+
+        <p>I needed a fast solution, and my first attempt at writing the Decision Sieve in Delphi took longer than expected. This is an emergency solution until I find the inner calmness required to do it <em>right</em>.</p>
+
+        <h3>Do you spy me?</h3>
+
+        <p>Of course not. The sieving logic is exclusively being performed on your machine, no data is transferred back. If you don't trust me, feel free to run the Decision Sieve locally on a web-capable computer without internet access - it is <a href="https://bitbucket.org/tux_/decision-sieve" target="_blank">Free Software</a>. Yay!</p>
+
+        <h3>How do I use it?</h3>
+
+        <ul><li><u><b>Priority Sieve:</b></u>
+            <ol><li>Enter a list of things in your list.</li>
+              <li>Optionally, mark a couple of things as "less important" or "more important" using the slider on the right side.</li>
+              <li>Enter the maximum number of things that should be left after sieving.</li>
+              <li>Press the button and watch the magic happen.</li></ol></li>
+          <li><u><b>Price Sieve:</b></u>
+            <ol><li>Enter a list of things in your list.</li>
+              <li>Specify the particular price for each thing in the list.</li>
+              <li>Enter the maximum budget.</li>
+              <li>Press the button and watch the magic happen.</li></ol></li></ul>
+      </section>
+    </main>
+  </body>
+</html>
